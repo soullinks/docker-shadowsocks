@@ -1,0 +1,12 @@
+machine:
+    services:
+        - docker
+
+dependencies:
+    override:
+        - docker info
+        - docker build -t circleci/docker-shadowsocks .
+
+test:
+    override:
+        - docker run -d -p 1180:1180 circleci/docker-shadowsocks -s 0.0.0.0 -p 1080 -k test.pass -m aes-256-cfb
