@@ -6,4 +6,9 @@ RUN yum install -y python-setuptools m2crypto
 RUN easy_install pip
 RUN pip install shadowsocks
 
-ENTRYPOINT ["/usr/bin/ssserver"]
+ADD startup.sh /startup.sh
+RUN chmod a+x /startup.sh
+
+EXPOSE 1080
+
+CMD ["/startup.sh"]
