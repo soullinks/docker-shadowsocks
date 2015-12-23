@@ -14,18 +14,6 @@ Using a different encrypt method.
 
 #Environment varibles
 
-## PASSWORD
-
-Your shadowsocks password
-
-## METHOD
-
-Shadowsocks encrypt method. Default: aes-256-cfb
-
-## TIMEMOUT
-
-Shadowsocks timemout. Default: 60
-
 ## WORKERS
 
 Shadowsocks workers number. Default: 1
